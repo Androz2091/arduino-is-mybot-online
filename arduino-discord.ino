@@ -22,8 +22,8 @@ const char pass[] = SECRET_PASS;
 const char token[] = SECRET_TOKEN;
 const char watched_user_id[] = WATCHED_USER_ID;
 
-const uint8_t RED_LED = D0;
-const uint8_t GREEN_LED = D1;
+const uint8_t RED_LED = D1;
+const uint8_t GREEN_LED = D0;
 
 bool connected = false;
 int lastHeartbeatTime = -1;
@@ -61,7 +61,7 @@ void login(){
     payloadObj["op"] = 2;
     JsonObject data = payloadObj.createNestedObject("d");
     data["token"] = token;
-    data["intents"] = 768;
+    data["intents"] = 256;
     JsonObject properties = data.createNestedObject("properties");
     properties["$os"] = "darwin";
     properties["$browser"] = "discly";
@@ -88,8 +88,10 @@ void sendHeartBeat(){
 void onEventsCallback(WebsocketsEvent event, String data) {
     if(event == WebsocketsEvent::ConnectionOpened) {
         Serial.println("Websocket Connnection Opened!");
+        Serial.println(data);
     } else if(event == WebsocketsEvent::ConnectionClosed) {
         Serial.println("Websocket Connnection Closed!");
+        Serial.println(data);
     }
 }
 
@@ -131,6 +133,7 @@ void loop() {
       client.connect("wss://gateway.discord.gg/?v=6&encoding=json");
       connected = true;
     }
+ 
     if(offline){
         if(digitalRead(RED_LED) == HIGH){
             digitalWrite(RED_LED, LOW);
