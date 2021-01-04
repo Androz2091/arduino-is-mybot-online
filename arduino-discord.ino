@@ -135,7 +135,7 @@ void loop() {
       connected = true;
     }
  
-   if(offline){
+    if(offline){
         if(digitalRead(RED_LED) == HIGH){
             digitalWrite(RED_LED, LOW);
             delay(500);
