@@ -24,7 +24,7 @@ You will also need to add this link: `http://arduino.esp8266.com/stable/package_
 * Arduino esp8266 mod (node mcu 1.0)
 * Breadboard
 * x2 color leds (one green, one red)
-* x2 resistors (220 ohm)
+* x2 resistors (220 ohm 1/4 watt)
 * x5 wires
 
 ## Schematic
