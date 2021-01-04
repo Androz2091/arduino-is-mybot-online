@@ -142,7 +142,6 @@ void loop() {
         }
         if(digitalRead(GREEN_LED) == HIGH){
             digitalWrite(GREEN_LED, LOW);
-            delay(500);
         }
         digitalWrite(RED_LED, HIGH);
         delay(500);
