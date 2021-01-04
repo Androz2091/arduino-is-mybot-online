@@ -71,7 +71,6 @@ void login(){
     Serial.println(payload);
     client.send(payload);
     Serial.println("Login payload sent!");
-
 }
 
 void sendHeartBeat(){
