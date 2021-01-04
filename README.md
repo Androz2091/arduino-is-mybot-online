@@ -25,7 +25,7 @@ You will also need to add this link: `http://arduino.esp8266.com/stable/package_
 * Breadboard
 * x2 color leds (one green, one red)
 * x2 resistors (220 ohm)
-* x3 wires
+* x5 wires
 
 ## Schematic
 
