@@ -21,7 +21,7 @@ You will also need to add this link: `http://arduino.esp8266.com/stable/package_
 
 ## Used components
 
-* Arduino esp8266 mod (node mcu 1.0)
+* [Arduino esp8266 mod (node mcu 1.0)](https://www.amazon.fr/SeeKool-d%C3%A9veloppement-Fonctionne-Parfaitement-Compatible/dp/B07DRF9YTV)
 * Breadboard
 * x2 color leds (one green, one red)
 * x2 resistors (220 ohm 1/4 watt)
